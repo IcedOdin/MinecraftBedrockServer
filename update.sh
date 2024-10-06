@@ -3,7 +3,7 @@
 # Minecraft Server update script - runs online SetupMinecraft.sh
 
 # Set path variable
-USERPATH="pathvariable"
+USERPATH="/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin"
 PathLength=${#USERPATH}
 if [[ "$PathLength" -gt 12 ]]; then
    PATH="$USERPATH"
