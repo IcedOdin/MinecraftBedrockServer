@@ -228,7 +228,6 @@ Update_Server() {
   DownloadFile=$(echo "$DownloadURL" | sed 's#.*/##')
   echo "$DownloadURL"
   echo "$DownloadFile"
-
   # Download latest version of Minecraft Bedrock dedicated server
   echo "Downloading the latest version of Minecraft Bedrock server..."
   UserName=$(whoami)
@@ -399,6 +398,9 @@ if [ -d "$ServerName" ]; then
   cd minecraftbe
   cd $ServerName
   echo "Server directory is: $DirName/minecraftbe/$ServerName"
+
+  # Update Server Files
+  Update_Server
 
   # Update Minecraft server scripts
   Update_Scripts
